@@ -1,4 +1,7 @@
-//Leetcode Number 242
+// LeetCode #242 - Valid Anagram
+// Approach: Character frequency array
+// Time: O(n), Space: O(1)
+
 //Basically Anagram is nothing but equal number of charcters i.e same length and same characters sequence doen't matter
 //For example s="toy" and t="yot" it will return true because it is anagram
 class Solution {
