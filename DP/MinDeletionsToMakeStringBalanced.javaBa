@@ -1,0 +1,24 @@
+//Leetcode 1653. Minimum Deletions to Make String Balanced
+//Level : Medium
+//Technique Used : Optimized Dp with constant Space
+//Approach : 1)Traverse string from left to right
+  //2) Track number of 'b' characters seen so far
+  //3) When an 'a' is found after 'b', choose minimum deletions
+  //4) Use greedy decision with DP optimization
+//Time Complexity : O(n)
+//Space Complexity : O(1)
+
+class Solution{
+public int minimumDeletions(String s){
+  int countB = 0;
+  int deletions = 0;
+  for(char c : s.toCharArray()){
+    if(c == 'b'){
+      countB++;
+    }else{
+      deletions = Math.min(deletions + 1, countB);
+    }
+  }
+return deletions;
+}
+};
